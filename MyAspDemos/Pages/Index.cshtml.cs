@@ -6,15 +6,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
+// The Razor Page Code File!!!!
+
 namespace MyAspDemos.Pages
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
 
+        public string AuthorName { get; set; }
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
+            AuthorName = "Manoj Kumar Sharma";
         }
 
         public void OnGet()
