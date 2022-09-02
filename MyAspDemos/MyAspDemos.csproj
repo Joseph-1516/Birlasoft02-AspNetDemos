@@ -9,4 +9,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.28" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Demo\Views\" />
+  </ItemGroup>
+
 </Project>

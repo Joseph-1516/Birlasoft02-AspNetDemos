@@ -50,6 +50,17 @@ namespace MyAspDemos
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+
+                // Register the endpoints for the routes in the areas
+                endpoints.MapControllerRoute(
+                    name: "areas",
+                    pattern: "{area}/{controller=Home}/{action=Index}/{id?}");
+
+                // Register the endpoints for the routes not in any area.
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+
             });
         }
     }
