@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyAspDemos.Areas.Demo.ViewModels;
 
 namespace MyAspDemos.Areas.Demo.Controllers
 {
@@ -18,6 +19,14 @@ namespace MyAspDemos.Areas.Demo.Controllers
         public IActionResult Index2()
         {
             return View();
+        }
+
+
+        // HTTP GET
+        public IActionResult DisplayCustomer()
+        {
+            CustomerViewModel viewModel = new CustomerViewModel();
+            return View(viewModel);
         }
     }
 }
